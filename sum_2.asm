@@ -9,7 +9,7 @@ MOV AX, 0 ; 변수 초기화
 NEXT : ADD AX, CX
 DEC CX
 CMP CX, 0
-JGE NEXT ; CX가 0보다 크거나 같다면 NEXT로 분기해라
+JG NEXT ; CX가 0보다 크면 NEXT로 분기해라
 MOV TOTAL, AX
 
 MOV AH, 4CH
