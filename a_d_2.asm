@@ -1,0 +1,21 @@
+; 직접 주소지정방식 예제
+
+MAIN SEGMENT
+ASSUME CS:MAIN, DS:MAIN
+
+MOV AX, CS ; 레지스터 직접 주소 지정 방식
+MOV DS, AX
+
+MOV AX, DATA1 ; 메모리 직접 주소 지정 방식
+ADD AX, DATA2
+MOV RESULT, AX
+
+MOV AH, 4CH
+INT 21H
+
+DATA1 DW 1010H
+DATA2 DW 203CH
+RESULT DW ?
+
+MAIN ENDS
+END
