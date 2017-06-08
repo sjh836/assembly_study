@@ -1,9 +1,8 @@
 MAIN SEGMENT public
 ASSUME CS:MAIN, DS:MAIN
 
-EXTRN ADD2:near, TABLE1:WORD
-
-PUBLIC DATA3
+EXTRN ADD2:near, TABLE1:WORD ; 외부에서 정의되고 내부에서 이용
+PUBLIC DATA3 ; 내부에서 정의되고 외부에서 사용
 
 ADD1: MOV AX, CS
 MOV DS, AX

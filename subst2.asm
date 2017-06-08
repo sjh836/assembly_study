@@ -4,7 +4,7 @@ ASSUME CS:MAIN, DS:MAIN
 EXTRN DATA3:WORD
 PUBLIC ADD2, TABLE1
 
-ADD2 PROC far ; 프로시저 정의
+ADD2 PROC far ; 다른 세그먼트내에 선언되어 있으면 far, 프로세서는 스택으로 부터 2WORD
 	PUSH AX
 	MOV AX, TABLE1
 	ADD AX, POINT1

@@ -1,10 +1,10 @@
 MAIN SEGMENT public
 ASSUME CS:MAIN, DS:MAIN
 
-EXTRN DATA3:WORD
+EXTRN DATA3:WORD ; 데이터 세그먼트 또는 기타 세그먼트 내의 심벌이면 형은 BYTE, WORD, DWORD
 PUBLIC ADD2, TABLE1
 
-ADD2 PROC near ; 프로시저 정의
+ADD2 PROC near ; 프로시저 정의, 동일한 세그먼트내에 선언되어 있으면 near, 오프셋 1WORD
 	PUSH AX
 	MOV AX, TABLE1
 	ADD AX, POINT1
